@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alunos.css">
+    <title>Document</title>
+</head>
+
+<body onload="carregaPlanilha()">
+
+    <header>
+        <div class="card">
+            <p id="sgu">SGU</p>
+            <P id="sgu-user">Alunos</P>
+        </div>
+
+        <div class="botoes-header">
+            <input type="button" class="salvar efeito" value="Salvar">
+            <input type="button" class="voltar efeito" value="voltar" onclick="voltarHome()">
+        </div>
+    </header>
+
+    <div class="principal">
+        <main>
+            <div class="incluir">
+                <p>Incluir:</p>
+            </div>
+    
+            <div class="tipo">
+                <button class="button efeito">Aluno</button>
+            </div>
+    
+            <div class="acoes">
+                <button class="button efeito">Pesquisar</button>
+                <button class="button efeito">Editar</button>
+                <button class="button efeito">Excluir</button>
+            </div>
+    
+        </main>
+    
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Curso</th>
+                    <th>CPF</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    
+    <script src="../script.js"></script>
+</body>
+
+    <script>
+
+        function carregaPlanilha(){
+            const tabela = document.querySelector('#tabela');
+
+            for(let i = 1; i <= 20 ; i++){
+
+                tabela.innerHTML += `
+                    <tbody>
+                        <tr>
+                            <td>${i}</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                `
+
+            }
+
+        }
+
+    </script>
+
+</html>

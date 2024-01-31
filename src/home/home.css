@@ -23,7 +23,7 @@
 
 .cards {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha em telas menores */
     justify-content: center;
 }
 
@@ -32,14 +32,16 @@
     color: #000000ae;
     font-weight: bold;
     padding: 30px;
-    width: 100%;
+    width: calc(33.33% - 20px); /* Usando calc para levar em conta a margem à direita */
     max-width: 150px;
     border-radius: 8px;
-    font-size: 28px;
+    font-size: 1.5em; /* Ajuste conforme necessário */
     display: flex;
+    justify-content: center;
     text-align: center;
+    align-items: center;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.675);
-    margin-right: 20px;  
+    margin-right: 2%; /* Usando porcentagem em vez de valor fixo */
     margin-top: 80px;
     cursor: pointer;
 }
@@ -76,4 +78,26 @@
     transform: scale(1.01);
     cursor: pointer;
     background-color: #d4d4d4e0;
+}
+
+@media screen and (max-width: 480px) {
+    .nome-tela {
+        font-size: 30px;
+    }
+
+    #sair {
+        position: static;
+    }
+
+    .footer {
+        position: fixed;
+    }
+
+    .card {
+        margin-top: 10px;
+    }
+
+    .cards {
+        margin-top: 50px;
+    }
 }

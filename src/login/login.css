@@ -59,7 +59,7 @@
 }
 
 #acesso:hover {
-    background-color: #0085FF;
+    background-color: #0084ffce;
 }
 
 .nome-site {
@@ -67,6 +67,7 @@
     position: absolute;
     top: 50px;
     font-weight: bold;
+    text-align: center;
 }
 
 .footer {

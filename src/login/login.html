@@ -20,7 +20,7 @@
                 <input placeholder="Senha" type="password" name="password" id="password" class="password">
 
                 <div class="botoes">
-                    <a id="redefinir" href="#">Esqueceu sua senha?</a>
+                    <a id="redefinir" href="#" onclick="aviso('Função não disponível. Entre em contato com o desenvolvedor.')">Esqueceu sua senha?</a>
                     <input id="acesso" type="button" value="Próximo">
                 </div>
             </div>
@@ -55,6 +55,10 @@
             }
 
         })
+
+        function aviso(texto){
+            alert(texto)
+        }
         
     </script>
 
