@@ -26,12 +26,36 @@
             </div>
 
             <div class="footer">
-                <p>SENAC 2023</p>
-                <p>Projeto Integrador</p>
-                <p>Desenvolvimento de Sistemas Orientado a Objetos</p>
+                <p style="font-size: 18px; font-weight: bold; color: #000000bc;">SENAC 2023</p>
+                <p style="color: #000000bc;">Projeto Integrador</p>
+                <p style="color: #000000bc;">Desenvolvimento de Sistemas Orientado a Objetos</p>
             </div>
     </div>
     
 </body>
+
+    <script>
+
+        const acessar = document.querySelector('#acesso');
+
+
+        acessar.addEventListener('click', function(){
+
+            const nomeUserDesejado = 'aluno';
+            const senhaDesejada = 'aluno';
+
+            const senha = document.querySelector('#password').value;
+            const usuario = document.querySelector('#user').value;
+            
+            if(usuario === nomeUserDesejado && senha === senhaDesejada){
+                window.location.href = '../home/home.html'
+                alert('Realizando login');
+            } else {
+                alert('Login ou senha incorretos.')
+            }
+
+        })
+        
+    </script>
 
 </html>

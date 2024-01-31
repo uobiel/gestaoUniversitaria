@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Login</title>
+</head>
+
+
+<body>
+
+        <div class="nome-tela">
+            <p>Sistema de Gestão</p>
+            <p>Universitário</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <p>Gerenciar Pessoas</p>
+            </div>
+            <div class="card">
+                <p>Gerenciar Professores</p>
+            </div>
+            <div class="card">
+                <p>Gerenciar Alunos</p>
+            </div>
+            <div class="card">
+                <p>Gerenciar Fornecedores</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p style="font-size: 18px; font-weight: bold; color: #000000bc;">SENAC 2023</p>
+            <p style="color: #000000bc;">Projeto Integrador</p>
+            <p style="color: #000000bc;">Desenvolvimento de Sistemas Orientado a Objetos</p>
+            <div class="sair">
+                <button id="sair">Sair</button>
+            </div>
+        </div>
+    
+</body>
+
+    <script>
+
+        let sair = document.querySelector('#sair');
+
+        sair.addEventListener('click', function(){
+            window.location.href = '../login/login.html'
+        })
+
+    </script>
+
+</html>
