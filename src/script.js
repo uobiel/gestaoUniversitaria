@@ -5,7 +5,7 @@ const alunos = document.querySelector('#alunos');
 const fornecedores = document.querySelector('#fornecedores');
 
 sair.addEventListener('click', function(){
-    window.location.href = '../login/login.html'
+    window.location.href = '../../index.html'
 })
 
 pessoas.addEventListener('click', function(){
