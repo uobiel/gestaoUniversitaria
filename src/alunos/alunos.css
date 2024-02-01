@@ -113,7 +113,6 @@ main {
 #tabela {
     border-collapse: collapse;
     width: 100%;
-    min-width: 800px;
 }
 
 th, td {
@@ -128,4 +127,14 @@ th {
 .efeito:hover {
     transform: scale(1.01);
     cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .principal {
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+    }
 }
