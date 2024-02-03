@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="alunos.css">
+    <script src="../script.js"></script>
     <title>Document</title>
 </head>
 
@@ -16,7 +17,7 @@
         </div>
 
         <div class="botoes-header">
-            <input type="button" class="salvar efeito" value="Salvar">
+            <input type="button" class="salvar efeito" value="Salvar" onclick="aviso('Funcionalidade não implementada')">
             <input type="button" class="voltar efeito" value="voltar" onclick="voltarHome()">
         </div>
     </header>
@@ -28,13 +29,13 @@
             </div>
     
             <div class="tipo">
-                <button class="button efeito">Aluno</button>
+                <button id="aluno" class="button efeito">Aluno</button>
             </div>
     
             <div class="acoes">
-                <button class="button efeito">Pesquisar</button>
-                <button class="button efeito">Editar</button>
-                <button class="button efeito">Excluir</button>
+                <button class="button efeito" onclick="aviso('Funcionalidade de Pesquisa não implementada')">Pesquisar</button>
+                <button class="button efeito" onclick="aviso('Funcionalidade de Edição não implementada')">Editar</button>
+                <button class="button efeito" onclick="aviso('Funcionalidade de Exclusão não implementada')">Excluir</button>
             </div>
     
         </main>
@@ -52,35 +53,39 @@
                 </tr>
             </thead>
         </table>
+
+
+        <div class="fade">
+
+            <div class="modal">
+                <div class="close-modal">
+                    <p>X</p>
+                </div>
+                <div class="nome-modal">
+                    <p>Novo Aluno</p>
+                </div>
+                <div class="container-main">
+                    <div class="linha">
+                        <input id="nomeAluno" type="text"  placeholder="Nome do aluno">
+                        <input id="emailAluno" type="email"  placeholder="E-mail do aluno">
+                        <input id="telefoneAluno" type="text"  placeholder="Telefone do aluno">
+                    </div>
+                    <div class="linha">
+                        <input id="enderecoAluno" type="text"  placeholder="Endereço do aluno">
+                        <input id="cursoAluno" type="text"  placeholder="Curso do aluno">
+                        <input id="cpfAluno" type="text"  placeholder="CPF do aluno">
+                    </div>
+                </div>
+
+                <div class="botao-cadastrar">
+                    <button id="cadastrarAluno">Cadastrar</button>
+                </div>
+            </div>
+
+        </div>
     </div>
     
-    <script src="../script.js"></script>
+    <script src="../alunos/alunos.js"></script>
 </body>
-
-    <script>
-
-        function carregaPlanilha(){
-            const tabela = document.querySelector('#tabela');
-
-            for(let i = 1; i <= 20 ; i++){
-
-                tabela.innerHTML += `
-                    <tbody>
-                        <tr>
-                            <td>${i}</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                `
-            }
-
-        }
-
-    </script>
 
 </html>

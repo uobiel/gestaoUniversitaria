@@ -1,3 +1,8 @@
+@keyframes animacao {
+    0%{background-color: #4242420d;}
+    100%{background-color: #4242424c;}
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -28,7 +33,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
+    flex-direction: column;
     border-radius: 10px;
     color: white;
     font-weight: bold;
@@ -46,7 +51,8 @@ header {
     margin: 20px;
 }
 
-.voltar, .salvar {
+.voltar,
+.salvar {
     padding: 10px;
     width: 100px;
     border-radius: 8px;
@@ -60,8 +66,10 @@ header {
 
 .principal {
     display: flex;
-    height: calc(100vh - 100px); /* Ajusta a altura da div principal excluindo a altura do header */
-    overflow: auto; /* Adiciona barra de rolagem à div principal */
+    height: calc(100vh - 100px);
+    /* Ajusta a altura da div principal excluindo a altura do header */
+    overflow: auto;
+    /* Adiciona barra de rolagem à div principal */
 }
 
 main {
@@ -73,7 +81,8 @@ main {
     padding-top: 20px;
 }
 
-.acoes, .tipo {
+.acoes,
+.tipo {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -115,17 +124,113 @@ main {
     width: 100%;
 }
 
-th, td {
+td {
     border: 1px solid #dddddd;
     text-align: left;
+    padding: 8px;
+    max-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+tr {
+    height: 40px;
 }
 
 th {
-    background-color: #f2f2f2;
+    height: 40px;
+}
+
+td.few-items {
+    max-height: none;
 }
 
 .efeito:hover {
     transform: scale(1.01);
+    cursor: pointer;
+}
+
+.fade {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #4242424c;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation-name: animacao;
+    animation-duration: 1s;
+}
+
+.modal {
+    width: 100%;
+    max-width: 500px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+.container-main {
+    display: flex;
+}
+
+.linha {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.linha input {
+    padding: 8px;
+    margin: 20px;
+    outline: none;
+    border: none;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid black;
+}
+
+.nome-modal {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #424242;
+}
+
+.botao-cadastrar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.botao-cadastrar button {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #AEAEAE;
+    color: rgb(81, 81, 81);
+    font-weight: bold;
+}
+
+.botao-cadastrar button:hover {
+    background-color: #aeaeaee6;
+    cursor: pointer;
+}
+
+.close-modal {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height: 20px;
+}
+
+.close-modal p {
+    margin: 20px;
+    font-size: 20px;
     cursor: pointer;
 }
 
